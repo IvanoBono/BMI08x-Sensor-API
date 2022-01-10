@@ -376,5 +376,5 @@ static float lsb_to_dps(int16_t val, float dps, uint8_t bit_width)
 {
     float half_scale = ((float)(1 << bit_width) / 2.0f);
 
-    return (dps / ((half_scale) + BMI08X_GYRO_RANGE_2000_DPS)) * (val);
+    return (dps / half_scale) * (val);
 }
